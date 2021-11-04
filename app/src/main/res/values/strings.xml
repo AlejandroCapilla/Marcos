@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Marcos</string>
+    <!-- General -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+
+    <!-- Fragment Presupuesto -->
+    <string name="medidas">Medidas</string>
+    <string name="color">Color</string>
+    <string name="modelo">Modelo</string>
+    <string name="vidrio">Vidrio</string>
+    <string name="otros">Otros</string>
+    <string name="marialuisa">Marialuisa</string>
+    <string name="ancho">Ancho</string>
+    <string name="alto">Alto</string>
+    <string name="otro_modelo">Modelo</string>
+    <string name="otro_color">Color</string>
+    <string name="otro_color_modelo">+Modelo</string>
+    <string name="anti">Anti</string>
+    <string name="doble_anti">Doble Anti</string>
+    <string name="sin_anti">Sin Anti</string>
+    <string name="mdf">MDF</string>
+    <string name="bastidor">Bastidor</string>
+    <string name="laminado">Laminado</string>
+    <string name="pegado_engrapado">Pegado/Engrapado</string>
+    <string name="precio">Precio:</string>
+    <string name="cero">0.0</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/cardview_dark_background"
+    android:gravity="bottom">
+
+    <ImageView
+        android:layout_width="256dp"
+        android:layout_height="198dp"
+        android:src="@drawable/ic_celaya_marcos"
+        app:tint="@color/primaryLightColor" />
+</LinearLayout>
