@@ -26,4 +26,7 @@
     <string name="pegado_engrapado">Pegado/Engrapado</string>
     <string name="precio">Precio:</string>
     <string name="cero">0.0</string>
+    <string name="polioleo">Polioleo</string>
+    <string name="resina">Resina</string>
+
 </resources>

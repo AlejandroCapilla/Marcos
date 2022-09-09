@@ -25,20 +25,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class fragment_presupuesto extends Fragment implements AdapterView.OnItemSelectedListener, View.OnClickListener, TextWatcher {
-
     private TextView txtAncho, txtAlto, txtOtroModelo, txtOtroColor, txtOtroColorModelo, txtAnchoMarialuisa, txtColorMarialuisa;
     private Spinner spnModelo, spnColor;
     private RadioGroup gpoVidrio;
-    private RadioButton rdoAnti, rdoDobleAnti, rdoSinAnti;
+    private RadioButton rdoAnti, rdoDobleAnti, rdoSinAnti, rdoResina, rdoPolioleo;
     private CheckBox chkMdf, chkMarialuisa, chkBastidor, chkLaminado, chkPegEng;
     private TextView lblPrecio, lblMarialuisa;
     private ModelosSpinnerAdapter modelosSpinnerAdapter;
+
 
     private InputMethodManager imm;
     private TextView lblMensaje;
 
     public fragment_presupuesto() {
         // Required empty public constructor
+
     }
 
     @Override
@@ -57,19 +58,19 @@ public class fragment_presupuesto extends Fragment implements AdapterView.OnItem
         txtAncho.addTextChangedListener(this);
         txtAlto.addTextChangedListener(this);
 
-        spnModelo.setOnItemSelectedListener(this);
+        //spnModelo.setOnItemSelectedListener(this);
         txtOtroModelo.addTextChangedListener(this);
 
-        spnColor.setOnItemSelectedListener(this);
-        txtOtroColorModelo.addTextChangedListener(this);
+        //spnColor.setOnItemSelectedListener(this);
+        //txtOtroColorModelo.addTextChangedListener(this);
 
-        chkMdf.setOnClickListener(this);
-        chkMarialuisa.setOnClickListener(this);
-        chkBastidor.setOnClickListener(this);
+        //chkMdf.setOnClickListener(this);
+        //chkMarialuisa.setOnClickListener(this);
+        //chkBastidor.setOnClickListener(this);
         chkLaminado.setOnClickListener(this);
         chkPegEng.setOnClickListener(this);
 
-        txtAnchoMarialuisa.addTextChangedListener(this);
+        //txtAnchoMarialuisa.addTextChangedListener(this);
 
     }
 
@@ -77,30 +78,32 @@ public class fragment_presupuesto extends Fragment implements AdapterView.OnItem
         txtAncho = view.findViewById(R.id.txtAncho);
         txtAlto = view.findViewById(R.id.txtAlto);
         txtOtroModelo = view.findViewById(R.id.txtOtroModelo);
-        txtOtroColor = view.findViewById(R.id.txtOtroColor);
-        txtOtroColorModelo = view.findViewById(R.id.txtOtroColorModelo);
-        txtAnchoMarialuisa = view.findViewById(R.id.txtAnchoMarialuisa);
-        txtColorMarialuisa = view.findViewById(R.id.txtColorMarialuisa);
-        spnModelo = view.findViewById(R.id.spnModelo);
-        spnColor = view.findViewById(R.id.spnColor);
+        //txtOtroColor = view.findViewById(R.id.txtOtroColor);
+        //txtOtroColorModelo = view.findViewById(R.id.txtOtroColorModelo);
+        //txtAnchoMarialuisa = view.findViewById(R.id.txtAnchoMarialuisa);
+        //txtColorMarialuisa = view.findViewById(R.id.txtColorMarialuisa);
+        //spnModelo = view.findViewById(R.id.spnModelo);
+        //spnColor = view.findViewById(R.id.spnColor);
         gpoVidrio = view.findViewById(R.id.gpoVidrio);
         rdoAnti = view.findViewById(R.id.rdoAnti);
         rdoDobleAnti = view.findViewById(R.id.rdoDobleAnti);
         rdoSinAnti = view.findViewById(R.id.rdoSinAnti);
-        chkMdf = view.findViewById(R.id.chkMdf);
-        chkMarialuisa = view.findViewById(R.id.chkMarialuisa);
-        chkBastidor = view.findViewById(R.id.chkBastidor);
+        rdoResina = view.findViewById(R.id.rdoResina);
+        rdoPolioleo = view.findViewById(R.id.rdoPolioleo);
+        //chkMdf = view.findViewById(R.id.chkMdf);
+        //chkMarialuisa = view.findViewById(R.id.chkMarialuisa);
+        //chkBastidor = view.findViewById(R.id.chkBastidor);
         chkLaminado = view.findViewById(R.id.chkLaminado);
         chkPegEng = view.findViewById(R.id.chkPegEng);
         lblPrecio = view.findViewById(R.id.lblPrecio);
-        lblMarialuisa = view.findViewById(R.id.lblMarialuisa);
+        //lblMarialuisa = view.findViewById(R.id.lblMarialuisa);
 
         //inicializa los elementos del spinnerModelos y los agrega
-        Modelos.inicializarModelos();
-        modelosSpinnerAdapter = new ModelosSpinnerAdapter(getContext(), R.layout.adapter_spinner_modelo, Modelos.getModelosArrayList());
-        spnModelo.setAdapter(modelosSpinnerAdapter);
+        //Modelos.inicializarModelos();
+        //modelosSpinnerAdapter = new ModelosSpinnerAdapter(getContext(), R.layout.adapter_spinner_modelo, Modelos.getModelosArrayList());
+        //spnModelo.setAdapter(modelosSpinnerAdapter);
 
-        spnColor.setAdapter(new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, llenarSpnColor()));
+        //spnColor.setAdapter(new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, llenarSpnColor()));
 
         imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
     }
@@ -112,18 +115,10 @@ public class fragment_presupuesto extends Fragment implements AdapterView.OnItem
                 completos = false;
             } else if (txtAlto.getText().toString().equals("")) {
                 completos = false;
-            } else if (spnModelo.getSelectedItemPosition() == 7) {
-                if (txtOtroModelo.getText().toString().equals("")) {
+            }else if (txtOtroModelo.getText().toString().equals("")) {
                     completos = false;
-                }
-            } else if (spnColor.getSelectedItemPosition() == 8) {
-                if (txtOtroColorModelo.getText().toString().equals("")) {
+            } else if (txtOtroColorModelo.getText().toString().equals("")) {
                     completos = false;
-                }
-            }else if (chkMarialuisa.isChecked()) {
-                if (txtAnchoMarialuisa.getText().toString().equals("")) {
-                    completos = false;
-                }
             }
 
             return completos;
@@ -163,7 +158,7 @@ public class fragment_presupuesto extends Fragment implements AdapterView.OnItem
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        switch (adapterView.getId()) {
+        /*switch (adapterView.getId()) {
             case R.id.spnModelo:
                 if (i == 7) {
                     txtOtroModelo.setVisibility(View.VISIBLE);
@@ -194,7 +189,7 @@ public class fragment_presupuesto extends Fragment implements AdapterView.OnItem
                 break;
         }
 
-        calcularPrecio();
+        calcularPrecio();*/
     }
 
     @Override
@@ -206,7 +201,7 @@ public class fragment_presupuesto extends Fragment implements AdapterView.OnItem
     public void onClick(View view) {
         switch (view.getId()) {
 
-            case R.id.chkMarialuisa:
+            /*case R.id.chkMarialuisa:
                 boolean checked = ((CheckBox) view).isChecked();
                 if (checked) {
                     lblMarialuisa.setVisibility(View.VISIBLE);
@@ -222,7 +217,7 @@ public class fragment_presupuesto extends Fragment implements AdapterView.OnItem
                     //Crear metodo que solo cierre el teclado si este no esta cerrado
                     imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
                 }
-                break;
+                break;*/
         }
 
         calcularPrecio();

@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //UI
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        toolbar = findViewById(R.id.toolbar);
+        //toolbar = findViewById(R.id.toolbar);
 
-        //Setuo toolbar
-        setSupportActionBar(toolbar);
+        //Setup toolbar
+        //setSupportActionBar(toolbar);
 
-        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        //toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+        //drawerLayout.addDrawerListener(toggle);
+        //toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
         contenedor_agregar = new Contenedor_agregar();
