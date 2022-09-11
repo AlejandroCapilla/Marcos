@@ -8,37 +8,8 @@
     android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical">
-
-        <include
-            layout="@layout/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"/>
-
-        <FrameLayout
-            android:id="@+id/content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu"/>
-
+        android:name="com.example.marcos.fragment_presupuesto" />
 </androidx.drawerlayout.widget.DrawerLayout>

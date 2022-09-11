@@ -8,66 +8,45 @@
     android:padding="10dp"
     tools:context=".fragment_presupuesto">
 
-    <EditText
-        android:id="@+id/txtAncho"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inplay1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="5dp"
         android:ems="10"
         android:focusedByDefault="true"
-        android:hint="@string/ancho"
-        android:inputType="numberDecimal"
-        android:nextFocusDown="@id/txtAlto"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/txtAlto"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtAncho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ancho"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@id/txtAlto"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/alto"
-        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/inplay1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        app:layout_constraintStart_toStartOf="@+id/guideline4">
 
-    <!--<EditText
-        android:id="@+id/txtAnchoMarialuisa"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:ems="10"
-        android:focusedByDefault="true"
-        android:hint="@string/ancho"
-        android:inputType="numberDecimal"
-        android:nextFocusDown="@id/txtColorMarialuisa"
-        android:visibility="gone"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblMarialuisa"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/txtColorMarialuisa"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/color"
-        android:inputType="textPersonName"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/lblMarialuisa"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
-        -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtAlto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/alto"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -90,82 +69,24 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/medidas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inplay2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/modelo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAncho" />
-
-    <!--<Spinner
-        android:id="@+id/spnModelo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-    -->
-
-    <!--<TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/color"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnModelo" />
-    -->
-
-    <!--<Spinner
-        android:id="@+id/spnColor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-    -->
-
-    <!--<EditText
-        android:id="@+id/txtOtroColor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
         android:ems="10"
-        android:hint="@string/otro_color"
-        android:inputType="textPersonName"
-        android:nextFocusDown="@id/txtOtroColorModelo"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/spnColor"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
-    -->
-
-    <EditText
-        android:id="@+id/txtOtroModelo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/otro_modelo"
-        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/inplay1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/inplay1"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtOtroModelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/otro_modelo"
+            android:inputType="numberSigned"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView4"
@@ -173,54 +94,53 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/vidrio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtOtroModelo" />
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <RadioGroup
         android:id="@+id/gpoVidrio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <RadioButton
             android:id="@+id/rdoAnti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:checked="true"
             android:text="@string/anti" />
 
         <RadioButton
             android:id="@+id/rdoDobleAnti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="@string/doble_anti" />
 
         <RadioButton
             android:id="@+id/rdoSinAnti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="@string/sin_anti" />
 
         <RadioButton
             android:id="@+id/rdoResina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="@string/resina" />
 
         <RadioButton
             android:id="@+id/rdoPolioleo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="@string/polioleo" />
-
     </RadioGroup>
 
     <androidx.constraintlayout.widget.Guideline
@@ -237,99 +157,49 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.6666" />
 
-    <!--<CheckBox
-        android:id="@+id/chkMdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="@string/mdf"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <CheckBox
-        android:id="@+id/chkMarialuisa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/marialuisa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chkMdf" />
-
-    <CheckBox
-        android:id="@+id/chkBastidor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bastidor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chkMarialuisa" />
-        -->
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/otros"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/txtOtroModelo" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inplay2" />
 
     <CheckBox
         android:id="@+id/chkPegEng"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
         android:text="@string/pegado_engrapado"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/chkLaminado" />
 
     <CheckBox
         android:id="@+id/chkLaminado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
         android:text="@string/laminado"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <!--<TextView
-        android:id="@+id/lblMarialuisa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/marialuisa"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chkBastidor" />
-        -->
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/precio"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/gpoVidrio"
-        app:layout_constraintStart_toStartOf="@+id/guideline4" />
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gpoVidrio" />
 
     <TextView
         android:id="@+id/lblPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
         android:text="@string/cero"
-        android:textSize="24sp"
+        android:textColor="@color/primaryColor"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toEndOf="@+id/textView7" />
-
-    <!--<EditText
-        android:id="@+id/txtOtroColorModelo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/otro_color_modelo"
-        android:inputType="numberSigned"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/spnColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline6" />
-    -->
 
     <TextView
         android:id="@+id/lblMensaje"

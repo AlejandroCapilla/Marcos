@@ -1,21 +1,10 @@
 package com.example.marcos;
 
-import android.graphics.drawable.Icon;
-
 public class Producto {
-    //private byte noProducto;//numero consecutivo por pedido
-    private float ancho, alto;
-    //private Icon icono;
+    float ancho, alto;
     private int modelo;
-    //private String color;
-    //private int modeloColor;
     private String vidrio;
-    //private boolean marialuisa;
-    //private float anchoMarialuisa;
-    //private String colorMarialuisa;
-    //private boolean mdf, bastidor;
     private boolean laminado, pegeng;
-    private int precio;
 
     public Producto(float ancho, float alto, int modelo,
                     String vidrio, boolean laminado, boolean pegeng) {
@@ -25,35 +14,31 @@ public class Producto {
         this.vidrio = vidrio;
         this.laminado = laminado;
         this.pegeng = pegeng;
-        this.precio = calcularPrecio();
     }
 
     public int getPrecio() {
-        return precio;
+        return calcularPrecio();
     }
 
     private int calcularPrecio() {
-        return precioMarco() + precioVidrio() + precioOtros();
+        return precioMarco() + precioVidrio() + precioMDF();
     }
 
     private int precioMarco() {
-        //formula para el precio del marco
-        return 0;
+        return (int)((ancho+ancho+alto+alto)*modelo/240);
     }
 
     private int precioVidrio() {
-        //formula para el precio del vidrio
         int p;
-
         switch (vidrio) {
             case "Anti":
-                p = 1;
+                p = (int)(ancho*alto*1350*2/(160*220));
                 break;
             case "Doble Anti":
-                p = 2;
+                p = (int)(ancho*alto*1350*4/(160*220));
                 break;
             case "Sin Anti":
-                p = 3;
+                p = 10;
                 break;
             case "Resina":
                  p = 4;
@@ -67,16 +52,17 @@ public class Producto {
         return p;
     }
 
-    private int precioOtros() {
-        //formula para el precio de otros
-        int p = 0;
-        if (laminado) {
-            p = p + 1;
-        }
+    private int precioMDF() {
+        return (int)((ancho*alto*200*3)/(122*244));
+    }
 
-        if (pegeng) {
+    private int precioOtros() {
+        int p = 0;
+        if (laminado)
             p = p + 1;
-        }
+
+        if (pegeng)
+            p = p + 1;
 
         return p;
     }
